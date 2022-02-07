@@ -16,24 +16,25 @@ function App() {
   const [resultado, setResultado] = useState({})
   const [error, setError] = useState(false)
 
+  const {ciudad, pais} = busqueda
+
   useEffect( ()=> {
        const consultarAPI = async () =>{
 
         if(consultar){
-          const appId = '351113aae9af1105064d81db14c115bf'
-          const url = `http://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appId}`
+          const appId = '09f79d86e585a86f4b7947841307c129'
+          const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&APPID=${appId}`
           const respuesta = await fetch(url)
           const resultado = await respuesta.json()
           setResultado(resultado)
           setConsultar(false)
-          
+
           if(resultado.cod === "404" ||  resultado.cod === "401") {
              setError(true);
           } else {
              setError(false);
           }
         }  
-
        }
 
        consultarAPI()

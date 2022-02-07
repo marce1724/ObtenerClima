@@ -54,7 +54,7 @@ const Formulario = ({busqueda, setBusqueda, setConsultar}) => {
                  <option value="HN">Honduras</option>
                  <option value="US">Estados Unidos</option>
                  <option value="DE">Alemania</option>
-                 <option value="GB">Reino Unido</option>
+                 <option value="UK">Reino Unido</option>
                  <option value="CR">Costa Rica</option>
                  <option value="ES">España</option>
                  <option value="CA">Canadá</option>
